@@ -1,8 +1,8 @@
 # STATUS — Engaja PJ
 
-**Atualizado em:** 2026-09-25
+**Atualizado em:** 2026-10-21
 **Fase atual:** Fase 2 — Publicação controlada e recuperação
-**Estado:** F2-T01..F2-T07 concluídas (7/9 — 78%); F2-T07 com PUBLICAÇÃO REAL na Google Ads provada (25/09) — aguardando aceite humano da publicação real; F2-T08 é a próxima elegível.
+**Estado:** F2-T01..F2-T07 concluídas (7/9 — 78%); F2-T07 fechada com aceite humano do owner da publicação real (21/10/2026); F2-T08 é a próxima elegível.
 
 ## Fase 1
 
@@ -23,6 +23,7 @@
 - F2-T06 concluída (18/09/2026): prova de acesso Google (CA-2-006) — rota read-only com BLOCKED_ACCESS sem credenciais e PROVA_OK com credenciais reais. Build v0.0.118; 6/6 testes.
 - F2-T07 concluída (22/09/2026): adaptador Google real + gates server-side. Build v0.0.119; 8/9 testes; aceite do owner (22/09).
 - F2-T07 — PUBLICAÇÃO REAL PROVADA (25/09/2026, builds v0.0.120–125): contas de teste criadas pelo owner (MCC EngajaPJ Teste 103-812-9898 + cliente EngajaPJ Cliente Teste 2391563500), secrets gravados, allowlist criada. Campanha T-F2T07-REAL-FINAL criada NA GOOGLE ADS pela rota do sistema — budget + campaign SEARCH em PAUSED, confirmada por consulta GAQL (CA-2-008). Idempotência real: retry → "nada duplicado", 1 única campanha na conta, provado via GAQL (CA-2-009). Fix v25: containsEuPoliticalAdvertising obrigatório; mutate combinado atômico budget+campaign; consultas via GAQL searchStream.
+- F2-T07 — FECHADA COM ACEITE HUMANO (21/10/2026): owner aceitou a publicação real; verificação independente refeita do zero no fechamento (backend saudável, migrations 0001–0014 aplicadas, build v0.0.125/314d67b, PROVA_OK fresca, tentativa 05td87wxn53g8t7 CONFIRMED_PAUSED, remote_objects e trilha append-only íntegros, gates bloqueando como esperado, RN-226 limpo).
 - F2-T08..F2-T09 pendentes.
 
 ## Limites

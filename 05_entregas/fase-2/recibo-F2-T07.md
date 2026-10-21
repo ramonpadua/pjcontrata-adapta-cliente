@@ -1,6 +1,6 @@
 # Recibo — F2-T07 (parte 2): Publicação REAL na Google Ads (CA-2-008/009)
 
-- **Data:** 25/09/2026
+- **Data:** 25/09/2026 (fechamento em 21/10/2026)
 - **SPEC:** SPEC-2-002 (Google Ads — publicação controlada)
 - **Build:** v0.0.120–v0.0.125 (QA ok em todos os applies)
 - **Champion:** Gustavo — Gerente de Marketing
@@ -48,4 +48,6 @@
 ## Aceite humano
 
 - Bloqueio limpo aprovado pelo owner (22/09/2026, 08:19).
-- Publicação real executada em 25/09/2026 — aceite humano pendente no momento da emissão deste recibo.
+- Publicação real executada em 25/09/2026.
+- **Aceite humano da publicação real: owner — "Aceito a publicação real da F2-T07 — pode concluir a task" (21/10/2026).**
+- Verificação independente no fechamento (21/10/2026): PROVA_OK fresca; tentativa 05td87wxn53g8t7 CONFIRMED_PAUSED; remote_objects e trilha append-only íntegros; gates 400 como esperado (campanha ARCHIVED; reconciliar estado válido); RN-226 limpo. Task fechada.

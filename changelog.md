@@ -1,5 +1,17 @@
 # Changelog — IA Ferramenta
 
+## 2026-10-21 — F2-T07: aceite humano da publicação real; task fechada
+
+- Owner aceitou a publicação real ("Aceito a publicação real da F2-T07 — pode concluir a task", 21/10/2026).
+- Verificação independente refeita do zero no fechamento: backend /api/health 200; migrations 0001–0014 aplicadas (0014_f2t07_google_object_types confirmada); build v0.0.125 (314d67b).
+- Prova de acesso fresca: PROVA_OK — 6 customers acessíveis, teste completo (239-156-***, BRL, São Paulo, test_account true), demais fora da allowlist; zero mutação; zero segredo.
+- Banco: tentativa 05td87wxn53g8t7 CONFIRMED_PAUSED (operator teste.marketing, 25/09 14:49 BRT); 2 remote_objects (campaign PAUSED + budget NORMAL, remote_id mascarado, remote_id_real apenas no campo interno); trilha PEDIDO_CRIADO → ENVIO_INICIADO → ESTADO_CONFIRMADO com payload_hash.
+- Gates reprovados como esperado: publicar campanha ARCHIVED → 400 "Campanha não está no estado APPROVED"; reconciliar tentativa CONFIRMED_PAUSED → 400 (só UNCERTAIN/PARTIAL_FAILURE).
+- RN-226: zero segredo/remote_id_real nas respostas verificadas.
+- Aprendizado: AP-2026-09-25-1445-google-ads-v25-obrigatorios.md recriado (commit 5951e76); controle.md atualizado com F2-T05/T06/T07 (referências a recibos onde o AP nunca foi commitado).
+- Reparo de incidente: commit 4486ccf criou 06_noteas/ com conteúdo corrompido e commit 2abe32a inseriu linhas corrompidas no controle.md — ambos limpos no commit e01d4ae (06_noteas removido em b7a041d; controle.md íntegro).
+- Fase 2: 7/9 (78%). Próxima elegível: F2-T08 (falha parcial, timeout e reconciliação Google).
+
 ## 2026-09-25 — F2-T07: publicação REAL na Google Ads provada
 
 - Contas de teste criadas pelo owner: MCC "EngajaPJ Teste" 103-812-9898 + cliente "EngajaPJ Cliente Teste" 2391563500 (testAccount TRUE; status CLOSED é o estado normal de conta de teste na v25).
@@ -33,10 +45,6 @@
 - Pendência transferida para F2-T07: conta de teste Google Ads — a UI do Google prende o fluxo de criação num assistente de campanha que exige forma de pagamento; 3 rascunhos de conta inertes sem cobrança; não confirmar cartão.
 - Recibo 05_entregas/fase-2/recibo-F2-T06.md.
 - Fase 2: 6/9 (67%).
-
-## 2026-09-22 — F2-T07 concluída (parte 1)
-
-- Fase 2: 7/9 (78%). Próxima elegível: F2-T08.
 
 ## Histórico anterior (14/09–17/09)
 
